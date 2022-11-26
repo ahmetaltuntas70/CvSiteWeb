@@ -9,7 +9,7 @@ namespace CvSiteWeb
 {
     public partial class AdminGirisYap : System.Web.UI.Page
     {
-        SqlConnection baglanti = new SqlConnection(@"Data Source=KarnetGuvenlik;Initial Catalog=CvSiteWebDB;Integrated Security=True");
+        SqlConnection baglanti = new SqlConnection(@"Data Source=..........;Initial Catalog=CvSiteWebDB;Integrated Security=True");
         protected void Page_Load(object sender, EventArgs e)
         {
 
