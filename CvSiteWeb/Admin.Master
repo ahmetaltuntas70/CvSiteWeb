@@ -1,0 +1,114 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="CvSiteWeb.Admin" %>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>CV ADMİN</title>
+
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+
+    <!-- Bootstrap CSS CDN -->
+    <link href="AdminDosyalar/bootstrap-3.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Our Custom CSS -->
+    <link href="AdminDosyalar/StyleSheet2.css" rel="stylesheet" />
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"></script>
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>AHMET ALTUNTAŞ</h3>
+                <strong>CV</strong>
+            </div>
+
+            <ul class="list-unstyled components">
+                <li>
+                    <a href="AdminHakkimda.aspx">
+                        <i class="glyphicon glyphicon-home"></i>
+                        HAKKIMDA
+                    </a>
+                </li>
+                <li>
+                    <a href="AdminProje.aspx">
+                        <i class="glyphicon glyphicon-briefcase"></i>
+                        PROJELER
+                    </a>
+                    <a href="AdminEgitim.aspx">
+                        <i class="glyphicon glyphicon-education"></i>
+                        EĞİTİM HAYATIM
+                    </a>
+                </li>
+                <li>
+                    <a href="AdminBeceri.aspx">
+                        <i class="glyphicon glyphicon-barcode"></i>
+                        BECERİLER
+                    </a>
+                </li>
+                <li>
+                    <a href="AdminIlgi.aspx">
+                        <i class="glyphicon glyphicon-play"></i>
+                        İLGİ ALANLARI
+                    </a>
+                </li>
+                <li>
+                    <a href="AdminKurs.aspx">
+                        <i class="glyphicon glyphicon-certificate"></i>
+                        KURS & SERTİFİKA
+                    </a>
+                </li>
+                <li>
+                    <a href="AnaSayfa.aspx">
+                        <i class="glyphicon glyphicon-backward"></i>
+                        ANA SAYFAYA DÖN
+                    </a>
+                </li>
+                <%--<li>
+                    <a href="AdminIletisim.aspx">
+                        <i class="glyphicon glyphicon-backward"></i>
+                        İLETİŞİM
+                    </a>
+                </li>--%>
+            </ul>
+
+            <ul class="list-unstyled CTAs">
+                <li>
+                    <a href="https://79b11471-ae0c-47d3-bc46-2ee0f58f276f.filesusr.com/ugd/5f0a80_f93f8fe90aab4bd1b002cb7e390deeee.pdf" class="download">CV İNDİR</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server"></asp:ContentPlaceHolder>
+
+        </div>
+    </div>
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="AdminDosyalar/jquery-1.12.0.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="AdminDosyalar/js-bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
